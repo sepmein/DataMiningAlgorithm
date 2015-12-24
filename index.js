@@ -6,7 +6,7 @@
  * @method mean
  * @param {Array} array
  * */
-exports.mean = function (array) {
+let mean = function (array) {
     let sum = 0, n = 0;
     for (let value of array) {
         sum += value;
@@ -15,11 +15,26 @@ exports.mean = function (array) {
     return sum / n;
 };
 /**
+ * @method trimmedMean
+ * @param {Array} array
+ * @param {number} percent
+ * */
+let trimmedMean = function (array, percent) {
+    let length = array.length;
+    array.sort();
+    let trimNumber = Math.round(length * percent / 100);
+    for(let i =trimNumber;i>0 ;i ++) {
+        array.shift();
+        array.pop();
+    }
+    return mean(array);
+};
+/**
  * @method Jaccard
  * @param {Array} table 2-way array table
  * @result {Number} jaccard value
  * */
-exports.jaccard = function (table) {
+let jaccard = function (table) {
     let q = 0, r = 0, s = 0, t = 0;
     for (let key in table[1]) {
         if (key !== 'name') {
@@ -42,3 +57,8 @@ exports.jaccard = function (table) {
     return (q / (q + r + s));
 };
 
+exports = {
+    mean: mean,
+    trimmedMean: trimmedMean,
+    jaccard: jaccard
+};
