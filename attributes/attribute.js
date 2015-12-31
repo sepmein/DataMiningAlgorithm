@@ -1,6 +1,6 @@
 'use strict';
 
-Class Attribute{
+class Attribute{
     constructor(){
         
     }
