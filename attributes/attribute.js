@@ -1,8 +1,11 @@
 'use strict';
 
 class Attribute{
-    constructor(){
-        
+    constructor(name){
+        this.name = name;
+    }
+    verify(value){
+
     }
 }
 
