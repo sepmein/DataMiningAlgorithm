@@ -3,7 +3,14 @@
  */
 'use strict';
 const expect = require('chai').expect;
-describe('basic',function () {
+const algorithm = require('../index');
+describe('basic', function () {
+    describe('mean', function () {
+        it('calculate mean', function () {
+            let array = [1, 2, 3, 4, 5, 1, 2, 323, 23, 23, 23, 23, 2, 42, 4, 34, 23, 42, 34, 5345];
+            console.log(algorithm.mean(array));
+        });
+    });
     describe('jaccard', function () {
         it('calculate', function () {
             let jaccard = require('../index').jaccard;
@@ -31,8 +38,7 @@ describe('basic',function () {
                     "test-6": true
                 }
             ];
-            expect
+            expect(1).to.equal(1);
         });
     });
-
 });

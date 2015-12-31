@@ -23,11 +23,30 @@ let trimmedMean = function (array, percent) {
     let length = array.length;
     array.sort();
     let trimNumber = Math.round(length * percent / 100);
-    for(let i =trimNumber;i>0 ;i ++) {
+    for (let i = trimNumber; i > 0; i++) {
         array.shift();
         array.pop();
     }
     return mean(array);
+};
+/**
+ * @method median
+ * @param {Array} array
+ * @param {Function} sortFunction
+ * @return {Number}
+ * */
+let median = function (array, sortFunction) {
+    if (sortFunction) {
+        array.sort(sortFunction);
+    } else {
+        array.sort();
+    }
+    let length = array.length;
+    if (array.length % 2) {
+        return array[Math.trim(length / 2) + 1];
+    } else {
+        return (array[length / 2] + array[length / 2 + 1]) / 2;
+    }
 };
 /**
  * @method Jaccard
@@ -60,5 +79,6 @@ let jaccard = function (table) {
 exports = {
     mean: mean,
     trimmedMean: trimmedMean,
+    median: median,
     jaccard: jaccard
 };
