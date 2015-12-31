@@ -2,7 +2,7 @@
 const NominalAttribute = require('./nominal_attribute');
 class OrdinalAttribute extends NominalAttribute {
     constructor(){
-        super(arguments);
+        super();
         this.type = 'ordinal';
     }
 }

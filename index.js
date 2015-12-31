@@ -76,7 +76,7 @@ let jaccard = function (table) {
     return (q / (q + r + s));
 };
 
-exports = {
+module.exports = {
     mean: mean,
     trimmedMean: trimmedMean,
     median: median,

@@ -37,6 +37,8 @@ class Table {
                 throw (new Error('Table#addline - '));
             }
         }
+        this.lines.push(line);
+        return this;
     }
 }
 

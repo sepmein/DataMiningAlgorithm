@@ -4,6 +4,7 @@ const isArray = require('is-js').array;
 class NominalAttribute extends Attribute{
     constructor(){
         let name = arguments[0];
+        let validatedValues = arguments[1];
         super(name);
         if (!isArray(validatedValues)) {
             throw (new Error('create nominal attribute# second argument should be an array'));
