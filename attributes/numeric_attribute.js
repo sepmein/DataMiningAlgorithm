@@ -1,10 +1,14 @@
 'use strict';
 const Attribute = require('./attribute');
+const isNumber = require('is-js').number;
 class NumericAttribute extends Attribute {
     constructor() {
-        super();
-        this.type = 'nomimal';
-        this.scales = ['numeric', 'ratio'];
+        super(arguments);
+        this.type = 'numeric';
+    }
+
+    verify(value) {
+        return isNumber(value);
     }
 }
 

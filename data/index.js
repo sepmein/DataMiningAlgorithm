@@ -4,7 +4,7 @@ const NominalAttribute = require('../attributes').NominalAttribute;
 const BinaryAttribute = require('../attributes').BinaryAttribute;
 const NumericAttribute = require('../attributes').NumericAttribute;
 
-const isArray = require('is-js');
+const isArray = require('is-js').array;
 class Table {
     constructor(schemaArray) {
         this.schemas = [];

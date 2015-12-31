@@ -1,8 +1,8 @@
 'use strict';
-const Attribute = require('./attribute');
-class OrdinalAttribute extends Attribute{
+const NominalAttribute = require('./nominal_attribute');
+class OrdinalAttribute extends NominalAttribute {
     constructor(){
-        super();
+        super(arguments);
         this.type = 'ordinal';
     }
 }
