@@ -17,15 +17,15 @@ describe('data', function () {
             let figure = new OrdinalAttribute('figure', ['slim', 'beefy', 'fat']);
             let age = new NumericAttribute('age');
             let table = new Table([hairColor, sex, figure, age]);
-            console.log(figure.validatedValues);
             let line1 = ['yellow', false, 'fat', 15];
             let line2 = ['white', false, 'slim', 95];
             let line3 = ['brown', true, 'slim', 34];
             let line4 = ['yellow', false, 'beefy', 25];
-            table.addLine(line1)
-                .addline(line2)
-                .addline(line3)
-                .addline(line4);
+            table
+                .addLine(line1)
+                .addLine(line2)
+                .addLine(line3)
+                .addLine(line4);
         });
     });
 });

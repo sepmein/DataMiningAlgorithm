@@ -8,7 +8,7 @@ class BinaryAttribute extends Attribute{
     }
 
     verify(value) {
-        return !(value !== true || value !== false);
+        return (value === true || value === false);
     }
 }
 
