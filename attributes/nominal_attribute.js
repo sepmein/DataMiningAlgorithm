@@ -16,6 +16,14 @@ class NominalAttribute extends Attribute{
             return element === value;
         });
     }
+
+    calculateDifference(data1, data2){
+        if(this.verify(data1)&&this.verify(data2)) {
+            return data1 === data2;
+        } else {
+            throw(new Error('Nominal Attribute # calculate difference - arguments should be verified'));
+        }
+    }
 }
 
 module.exports = NominalAttribute;

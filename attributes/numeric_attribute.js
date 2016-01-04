@@ -10,6 +10,18 @@ class NumericAttribute extends Attribute {
     verify(value) {
         return isNumber(value);
     }
+
+    oDistance() {
+
+    }
+
+    mahatanDistance() {
+
+    }
+
+    minkowskiDistance() {
+
+    }
 }
 
 module.exports = NumericAttribute;
